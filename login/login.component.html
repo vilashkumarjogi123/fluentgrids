@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>FluentGrid</title>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <div class="card-header col-md-6 bg-success text-white text-center">
+            <h3>Login</h3>
+            </div>
+            <div class="card-body bg-light">
+             <table>
+                 <tr>
+                     <td>Email</td>
+                 </tr>
+                 <tr>
+                        <td>
+                            <input type="text" id="email" [(ngModel)]="email">
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>Password</td>
+                        </tr>
+                        <tr>
+                               <td>
+                                   <input type="password" id="password" [(ngModel)]="password">
+                               </td>
+                           </tr>
+             </table>
+            </div>
+            <div class="card-footer bg-success col-md-6 ">
+             <button type="button" class="btn btn-primary" id="login" (click)="onlogin()">Submit</button>
+            </div>
+            <div>
+                <a routerLink="/signup">signup</a>
+            </div>
+
+        </div>
+    </body>
+</html>

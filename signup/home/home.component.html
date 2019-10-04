@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-xl bg-success text-white p-3">
+<input class="search" type="text" placeholder="Search" aria-label="Search">
+<div id="homediv">
+<a (click)="createContact()" id="contact">Contact</a>
+<a (click)="createGroup()" id="group">Group</a>
+<a (click)="Logout()" id="group">Logout</a>
+</div>
+</nav>
+<div>
+    <div *ngFor="let groupData of allContactDetails">
+        <div class="container mt-5">
+            <div class="col-md-4">
+            <div class="card-header bg-success p-2">
+               <h5><input type="checkbox" [(ngModel)]="groupData.isActive" (change)="makeActive()"> {{groupData.groupName}}</h5>
+            </div>
+            <div class="card-body">
+            <div *ngFor="let contactDetails of groupData.contactsLinked">
+                <p><input type="checkbox" [(ngModel)]="contactDetails.isActive" (change)="makeActive()">{{contactDetails.FirstName}}</p>
+                <p>{{contactDetails.LastName}}</p>
+                <p>{{contactDetails.Email}}</p>
+                <p>{{contactDetails.PhoneNumber}}</p>
+            </div>
+            </div>
+            <div class="card-footer">
+
+        </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+
+</div>
